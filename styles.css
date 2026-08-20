@@ -294,11 +294,6 @@ nav {
 }
 
 /* ── Services ── */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 12px;
-}
 
 .service-card {
   padding: 24px;
@@ -320,14 +315,15 @@ nav {
   margin-bottom: 12px;
 }
 
-.service-tag {
-  display: inline-block;
-  font-size: 11px;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: var(--gray-100);
+.service-checklist {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  flex-wrap: wrap;
+  font-size: 14px;
   color: var(--gray-600);
-  border: 1px solid var(--gray-200);
+  line-height: 1.65;
+  padding: 0 24px;
 }
 
 /* ── Process ── */
@@ -806,5 +802,9 @@ footer {
   .ss-placeholder {
     padding: 7px;
     gap: 7px;
+  }
+
+  .service-checklist {
+    gap: 0px;
   }
 }
