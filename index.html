@@ -469,70 +469,81 @@
             results, Book a free strategy call.
           </p>
 
-          <!-- Cal inline embed code begins -->
-          <div
-            style="
-              background-color: var(--gray-50);
-              border: 1px solid var(--gray-200);
-              border-radius: var(--radius-lg);
-              width: 100%;
-              height: 100%;
-              overflow: scroll;
-              max-width: 480px;
-              margin: 0 auto 20px;
-            "
-            id="my-cal-inline-30min"
-          ></div>
-          <script type="text/javascript">
-            (function (C, A, L) {
-              let p = function (a, ar) {
-                a.q.push(ar);
-              };
-              let d = C.document;
-              C.Cal =
-                C.Cal ||
-                function () {
-                  let cal = C.Cal;
-                  let ar = arguments;
-                  if (!cal.loaded) {
-                    cal.ns = {};
-                    cal.q = cal.q || [];
-                    d.head.appendChild(d.createElement("script")).src = A;
-                    cal.loaded = true;
-                  }
-                  if (ar[0] === L) {
-                    const api = function () {
-                      p(api, arguments);
-                    };
-                    const namespace = ar[1];
-                    api.q = api.q || [];
-                    if (typeof namespace === "string") {
-                      cal.ns[namespace] = cal.ns[namespace] || api;
-                      p(cal.ns[namespace], ar);
-                      p(cal, ["initNamespace", namespace]);
-                    } else p(cal, ar);
-                    return;
-                  }
-                  p(cal, ar);
-                };
-            })(window, "https://app.cal.com/embed/embed.js", "init");
-            Cal("init", "30min", { origin: "https://app.cal.com" });
+          <!-- Lead Form  -->
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="lead-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="3ed95658-bd7c-4b56-bee2-2dd8f2165069"
+            />
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input
+                id="name"
+                class="form-input"
+                type="text"
+                name="name"
+                required
+                placeholder="John Doe"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                id="email"
+                class="form-input"
+                type="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+              />
+            </div>
 
-            Cal.ns["30min"]("inline", {
-              elementOrSelector: "#my-cal-inline-30min",
-              config: {
-                layout: "month_view",
-                useSlotsViewOnSmallScreen: "true",
-              },
-              calLink: "piyshkmr/30min",
-            });
+            <div class="form-group">
+              <label for="number" class="form-label"
+                >WhatsApp / Phone Number</label
+              >
+              <input
+                id="number"
+                class="form-input"
+                type="tel"
+                name="number"
+                required
+                minlength="10"
+                placeholder="+91 1234567890"
+              />
+            </div>
+            <div class="form-group">
+              <label for="website" class="form-label">Your Website</label>
+              <input
+                id="website"
+                class="form-input"
+                type="url"
+                name="website"
+                placeholder="https://yourwebsite.com or Instagram/LinkedIn profile"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label"
+                >Tell me more about your business
+              </label>
+              <textarea
+                id="message"
+                class="form-input"
+                name="message"
+                required
+                placeholder="Briefly describe your business, your goals, and how much you're currently spending on meta ads."
+                rows="6"
+              ></textarea>
+            </div>
+            <button class="btn-primary form-btn" type="submit">Submit</button>
+          </form>
 
-            Cal.ns["30min"]("ui", {
-              hideEventTypeDetails: false,
-              layout: "month_view",
-            });
-          </script>
-          <!-- Cal inline embed code ends -->
+          <!-- Lead Form  -->
 
           <div class="cta-email">
             Prefer email?
