@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://piyshkmr.github.io/sitemap.xml
+Sitemap: https://piyushkumar.me/sitemap.xml
